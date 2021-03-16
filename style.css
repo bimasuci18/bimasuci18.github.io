@@ -97,7 +97,6 @@ body {
   }
   .nav .nav-links a:hover {
     background: violet;
-    color: ;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
@@ -111,7 +110,7 @@ body {
 .header {
   padding: 60px;
   text-align: center;
-  background: url(file:///C:/Users/bima%20suci/Desktop/cod/web/bimasuci18.github.io/img/nadiner.jpg) no-repeat;
+  background: url(https://res.cloudinary.com/bimasuci/image/upload/v1615937293/nadiner_ec9blz.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 70%;
@@ -149,4 +148,11 @@ footer {
   padding: 3px;
   background-color: black;
   color: white;
+}
+
+#contact {
+  margin: 10px;
+  justify-content: center;
+  justify-items: center;
+  box-sizing: border-box;
 }
