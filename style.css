@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
 }
@@ -115,6 +118,7 @@ body {
   background-position: center;
   min-height: 70%;
   color: white;
+  font-family: "Bangers";
   font-size: 30px;
 }
 .header .pevita {
@@ -155,4 +159,42 @@ footer {
   justify-content: center;
   justify-items: center;
   box-sizing: border-box;
+}
+
+.buttonload {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  display: none;
+}
+
+.fa {
+  margin-left: -12px;
+  margin-right: 8px;
+}
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
