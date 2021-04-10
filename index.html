@@ -39,7 +39,7 @@
     <!-- header -->
     <div class="header" id="Home">
       <img class="pevita" src="https://res.cloudinary.com/bimasuci/image/upload/v1615937461/pev_z8jcg7.jpg" alt="pevita" style="width: 200px" />
-      <h1 style="color: white;font-family: 'Bangers';">Bima Suci</h1>
+      <h1 style="color: hotpink;font-family: 'Bangers';">Bima Suci</h1>
       
     </div>
     <!-- akhir header -->
@@ -58,31 +58,31 @@
       <div class="w3-row-padding w3-grayscale">
         <div class="w3-col l3 m6 w3-margin-bottom">
           <img src="https://res.cloudinary.com/bimasuci/image/upload/v1615937474/team1_h6gq4u.jpg" alt="John" style="width:100%">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <h3>Paijo</h3>
+          <p class="w3-opacity">Bakulr</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, excepturi.</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
         
         <div class="w3-col l3 m6 w3-margin-bottom">
           <img src="https://res.cloudinary.com/bimasuci/image/upload/v1615937474/team1_h6gq4u.jpg" alt="Mike" style="width:100%">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <h3>Parman</h3>
+          <p class="w3-opacity">Rondo</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, saepe!</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <img src="https://res.cloudinary.com/bimasuci/image/upload/v1615937474/team1_h6gq4u.jpg" alt="Mike" style="width:100%">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <h3>Parno</h3>
+          <p class="w3-opacity">Muner</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, corporis?</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
           <img src="https://res.cloudinary.com/bimasuci/image/upload/v1615937474/team1_h6gq4u.jpg" alt="Dan" style="width:100%">
-          <h3>Dan Star</h3>
-          <p class="w3-opacity">Architect</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <h3>Parwi</h3>
+          <p class="w3-opacity">gali</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cupiditate!</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
       </div>
@@ -91,16 +91,16 @@
       <div class="w3-container w3-padding-32" id="contact">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
         <p>Lets get in touch and talk about your next stress.</p>
-        <div class="alert">
+        <div class="alert" id="alert">
           <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
           <strong>Matursuwun!</strong>pesen sampeyan wis dikirim.
-        </div>
+          </div>
         <form name="subscribers-bima-form" action="/action_page.php" target="_blank">
           <input class="w3-input w3-border" type="text" name="name" placeholder="Name" required name="Name">
           <input class="w3-input w3-section w3-border" name="email" type="text" placeholder="Email" required name="Email">
           <input class="w3-input w3-section w3-border" name="subject" type="text" placeholder="Subject" required name="Subject">
           <input class="w3-input w3-section w3-border" name="comment" type="text" placeholder="Comment" required name="Comment">
-          <button class="w3-button w3-black w3-section" type="submit">
+          <button onclick="myFunction()" class="w3-button w3-black w3-section" type="submit">
             <i class="fa fa-paper-plane"></i> SEND MESSAGE
           </button>
           <button class="buttonload">
@@ -122,9 +122,16 @@
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyI6hoMG0zR3EAKNykuPNeoolXFCGAbNqzMDqK2kHm6jbSill1O9HVbKx4uDioqm-c-tg/exec';
   const form = document.forms['subscribers-bima-form'];
-
+  const btnKirim = document.querySelector('.w3-button');
+  const buttonload = document.querySelector('.buttonload')
+function myFunction(){
+  document.querySelector("#alert");
+}
   form.addEventListener('submit', e => {
     e.preventDefault();
+    // menampilkam loading ,menghilangkan tombol kirim
+    buttonload.classList.toggle('.d-none')
+    btnKirim.classList.toggle('.d-none')
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))

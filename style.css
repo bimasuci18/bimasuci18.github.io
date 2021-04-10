@@ -55,7 +55,11 @@ body {
 .nav > #nav-check {
   display: none;
 }
-
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 @media (max-width: 600px) {
   .nav > .nav-btn {
     display: inline-block;
